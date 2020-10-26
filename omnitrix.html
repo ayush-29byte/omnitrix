@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnitrix</title>
+</head>
+<body>
+    <div class="omnitrix">
+        <div class="frame">
+            <div class="dial">
+                <div class="ring">
+                    <div class="d-left"></div>
+                    <div class="d-right"></div>
+                </div>
+            </div>
+            <div class="hor-sideroll">
+                <div class="sideroll-in"></div>
+            </div>
+            <div class="ver-sideroll"></div>
+            <div class="outer-case">
+                <div class="covering"></div>
+            </div>
+        </div>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --grey: #686f69;
+            --innerGreen: #1cd947;
+            --darkGreen: #0e5e18;
+            --back: #08330f;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--back);
+        }
+        .omnitrix{
+            position: relative;
+        }
+        .omnitrix .frame{
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            background-color: var(--grey);
+            box-shadow: inset 4px 4px 18px 7px rgba(0,0,0,0.75);
+            position: relative;
+        }
+        .omnitrix .frame .dial{
+            width: 17rem;
+            height: 17rem;
+            border-radius: 50%;
+            background-color: #000000;
+            position: relative;
+            top: 1.5rem;
+            left: 1.5rem;
+        }
+        .omnitrix .frame .dial .ring{
+            width: 15rem;
+            height: 15rem;
+            background-color: var(--innerGreen);
+            border-radius: 50%;
+            position: relative;
+            top: 1rem;
+            left: 1rem;
+            box-shadow: inset 4px 4px 15px 3px rgba(0,0,0,0.75);
+        }
+        .omnitrix .frame .dial .ring .d-left,
+        .omnitrix .frame .dial .ring .d-right{
+            width: 100px;
+            height: 200px;
+            background-color: #000000;
+            clip-path: polygon(100% 50%,0 0,0 100%);
+            position: relative;
+            border-radius: 70% 0 0 70%;
+        }
+        .omnitrix .frame .dial .ring .d-left{
+            top: 1.5rem;
+            left: -0.1rem;
+        }
+        .omnitrix .frame .dial .ring .d-right{
+            top: -11rem;
+            left: 8.85rem;
+            transform: rotate(180deg);
+        }
+        .omnitrix .frame .hor-sideroll{
+            width: 24rem;
+            height: 2.5rem;
+            background: #686f69;
+            border-radius: 8%;
+            position: relative;
+            top: -8rem;
+            left: -1.9rem;
+            z-index: -1;
+        }
+        .omnitrix .frame .hor-sideroll .sideroll-in{
+            background-color: #000;
+            width: 22rem;
+            height: 2.5rem;
+            position: absolute;
+            left: 0.85rem;
+        }
+        .omnitrix .frame .ver-sideroll{
+            width: 7.5rem;
+            height: 24rem;
+            background-color: var(--grey);
+            border-radius: 5%;
+            z-index: -5;
+            position: relative;
+            top: -21.55rem;
+            left: 6rem;
+        }
+        .omnitrix .frame .outer-case{
+            background-color: var(--darkGreen);
+            width: 22rem;
+            height: 22rem;
+            border-radius: 50%;
+            z-index: -5;
+            position: relative;
+            top: -44.5rem;
+            left: -1rem;
+        }
+        .omnitrix .frame .outer-case .covering{
+            width: 25rem;
+            height: 9rem;
+            background: var(--back);
+            position: relative;
+            top: 6.5rem;
+            left: -1.5rem;
+        }
+        .omnitrix .frame .dial .ring-anim{
+            width: 15rem;
+            height: 15rem;
+            background-color: var(--innerGreen);
+            clip-path: polygon(50% 0,100% 50%,50% 100%,0% 50%);
+            border-radius: 50%;
+            position: relative;
+            top: 1rem;
+            left: 1rem;
+            box-shadow: inset 4px 4px 15px 3px rgba(0,0,0,0.75);
+        }
+    </style>
+</body>
+</html>
